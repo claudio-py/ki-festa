@@ -2,6 +2,8 @@ const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle ')
 const showMenu = document.querySelector('nav.show .menu')
 const iconMenu = document.querySelector('nav .icon-menu ')
+const logo = document.querySelector('nav .logo img')
+const root = document.querySelector(':root')
 for (const element of toggle) {
 	element.addEventListener('click', () => {
 		nav.classList.toggle('show')
@@ -23,12 +25,19 @@ const navHeight = header.offsetHeight
 window.addEventListener('scroll', () => {
 	if (window.scrollY >= navHeight / 3) {
 		header.classList.add('scroll')
-		nav.style.height = '5rem'
-		showMenu.style.top = '5rem'
+		// nav.style.height = 'var(--shrink )'
+		// showMenu.style.top = 'var(--shrink )'
+				root.style.setProperty('--header-height', '5rem')
+
 	} else {
 		header.classList.remove('scroll')
-		nav.style.height = 'var(--header-height )'
-		showMenu.style.top = 'var(--header-height )'
+		// nav.style.height = 'var(--header-height )'
+		// showMenu.style.top = 'var(--header-height )'
+				root.style.setProperty('--header-height', '10rem')
+
+		
+
+
 	}
 })
 
@@ -116,7 +125,7 @@ scrollReveal.reveal(
 	`
 #inicio .swiper-inicio,
 #slide2 header, #slide2 .swiper-container,
-#sobre .text h2, #sobre .text h1,#sobre .text h3,#sobre .text .wpp-btn,
+#sobre .text ,#sobre .text .wpp-btn,
 #social .insta img,#social .insta .text , 
 #vantagens1 .group-0, #vantagens1 .group-1,#vantagens1 .group-2,#vantagens1 .group-3
 
