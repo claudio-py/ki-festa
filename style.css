@@ -384,15 +384,22 @@ section#banner .swiper-banner {
 	right: 0;
 	bottom: 0;
 	left: 0;
-background: linear-gradient(to left, rgb(255, 255, 255), rgba(161, 208, 240, 0.493), rgba(255, 255, 255, 0)); /* Adjust opacity as needed */
+	background: linear-gradient(
+		to left,
+		rgb(255, 255, 255),
+		rgba(161, 208, 240, 0.493),
+		rgba(255, 255, 255, 0)
+	); /* Adjust opacity as needed */
 	z-index: -1;
-opacity: 0;
+	opacity: 0;
 }
 #sobre .text {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	gap: 2rem;
+	justify-content: center;
+	align-items: center;
 }
 #sobre .text h1 {
 	font-family: var(--title-font);
@@ -406,7 +413,7 @@ opacity: 0;
 	text-shadow: 2px 2px 4px grey;
 }
 #sobre .text h3 {
-	color: var(--title-color);
+	color: var(--base-color2);
 }
 .wpp-btn {
 	display: flex;
@@ -432,6 +439,113 @@ opacity: 0;
 
 #sobre div {
 	margin: 2rem;
+}
+/* //=============================SOCIAL================== */
+#social .insta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#social div.text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-inline: 2rem;
+	text-align: center;
+	gap: 2rem;
+}
+#social div.text h2 {
+	font-size: var(--title-font-size);
+}
+#social div.text p {
+	font-size: var(--subtitle-font-size);
+}
+.swipe-social {
+	background: url(./assets/insta-bg.jpg);
+	/* background-color: lightpink; */
+	clip-path: polygon(
+		0 0,
+		30% 10%,
+		70% 0,
+		100% 5%,
+		100% 100%,
+		70% 90%,
+		30% 100%,
+		0 95%
+	);
+	background-size: cover;
+	box-sizing: content-box;
+	padding-block: 10rem;
+	width: 100%;
+}
+.swipe-social h2 {
+	color: rgb(250, 247, 247);
+	font-family: var(--title-font);
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 0 !important;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgb(51, 51, 51);
+}
+.swiper-slide blockquote {
+	position: relative;
+}
+#social blockquote::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.322);
+	z-index: -1;
+}
+
+#social blockquote {
+	padding: 3.2rem;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.589);
+	border-radius: 0.4rem;
+}
+#social blockquote p {
+	position: relative;
+	text-indent: 3rem;
+	margin-bottom: 2.4rem;
+	color: var(--title-color);
+}
+
+#social blockquote p span {
+	font: 700 4.8rem serif;
+	position: absolute;
+	top: -0.8rem;
+	left: -3rem;
+	color: var(--base-color);
+}
+
+#social cite {
+	display: flex;
+	align-items: center;
+}
+#social cite img {
+	width: 5rem;
+	height: 5rem;
+
+	border: 2px solid rgb(6, 232, 6);
+	border-radius: 50%;
+	object-fit: cover;
+	clip-path: circle();
+	margin-right: 0.8rem;
+}
+
+/* =========swiper-social=========== */
+.swiper-social {
+	position: relative;
+	overflow: hidden;
+}
+.swiper-social .swiper-slide {
+	height: auto;
+	padding: 6.4rem 1.6rem;
 }
 
 /* //===================VANTAGENS=======================// */
@@ -471,8 +585,11 @@ opacity: 0;
 }
 
 #vantagens .central img {
-	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 	object-fit: contain;
+}
+#vantagens .central {
+	margin-inline: 1.5rem;
 }
 #vantagens .svg {
 	border-radius: 10px 10px 80% 10px;
@@ -621,37 +738,33 @@ footer .social a:hover {
 	.swiper-pagination {
 		display: none;
 	}
-/* =================SOBRE================ */
-#sobre{
-	justify-content: flex-start;
-	margin: 0;
-	background-size: cover;
-
-}
-#sobre::before {
-	background: linear-gradient(to right, rgb(255, 255, 255), rgba(161, 208, 240, 0.493), rgba(255, 255, 255, 0)); /* Adjust opacity as needed */
-
-}
-#sobre div.text{
-	max-width: 50rem;
-	margin-left: 5rem;
-}
-.sobre-img{
-	display: none;
-}
+	/* =================SOBRE================ */
+	#sobre {
+		justify-content: flex-start;
+		margin: 0;
+		background-size: cover;
+	}
+	#sobre::before {
+		background: linear-gradient(
+			to right,
+			rgb(255, 255, 255),
+			rgba(161, 208, 240, 0.493),
+			rgba(255, 255, 255, 0)
+		); /* Adjust opacity as needed */
+	}
+	#sobre div.text {
+		max-width: 50rem;
+		margin-left: 5rem;
+	}
+	.sobre-img {
+		display: none;
+	}
 	/* =====REUSABLE CLASSES===== */
 	.container {
 		max-width: 1120px;
 		margin-inline: auto;
 	}
-	.section {
-		padding: 16rem 0;
-	}
-	.section header {
-		max-width: 52.3rem;
-		text-align: center;
-		margin-inline: auto;
-	}
+
 	.button {
 		height: 5rem;
 	}
@@ -723,8 +836,28 @@ footer .social a:hover {
 	#sobre .text {
 		text-align: start;
 		margin-left: 1rem;
+		align-items: flex-start;
 	}
-
+	/* /////===============SOCIAL============ */
+	#social .insta {
+		flex-direction: row;
+	}
+	#social .insta img {
+		max-width: 50rem;
+		min-width: 25rem;
+	}
+	#social div.text {
+		min-width: 20rem;
+	}
+	#social header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+	#social header h2 {
+		font-size: 2.5rem;
+	}
 	/* ============VANTAGENS======== */
 	#vantagens .central img {
 		max-width: 34rem;

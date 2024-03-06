@@ -79,7 +79,32 @@ const swiper = new Swiper('.swiper-container', {
 		}
 	}
 })
+// ============SOCIAL=================
+const swiperSobre = new Swiper('.swiper-social', {
+	slidesPerView: 1,
+	loop: true,
+	speed: 3000,
 
+	autoplay: {
+		delay: 1000
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true
+	},
+	breakpoints: {
+		767: {
+			slidesPerView: 2,
+			setWrapperSize: true
+		},
+		1200: {
+			slidesPerView: 3,
+
+			mousewheel: true,
+			keyboard: true
+		}
+	}
+})
 // ===========SCROLL REVEAL==========
 const scrollReveal = ScrollReveal({
 	origin: 'top',
