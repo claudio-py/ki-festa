@@ -711,7 +711,7 @@ footer .social a:hover {
 	width: 8rem;
 	position: fixed;
 	left: 0rem;
-	bottom: 2rem;
+	bottom: 0;
 	visibility: hidden;
 	opacity: 0;
 	animation: float 2s ease-in-out infinite;

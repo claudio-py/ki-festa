@@ -20,7 +20,7 @@ for (const link of links) {
 // ============HEADER SHADOW=====
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
-function changeHeaderWhenScroll() {
+window.addEventListener('scroll', () => {
 	if (window.scrollY >= navHeight / 3) {
 		header.classList.add('scroll')
 		nav.style.height = '5rem'
@@ -30,7 +30,7 @@ function changeHeaderWhenScroll() {
 		nav.style.height = 'var(--header-height )'
 		showMenu.style.top = 'var(--header-height )'
 	}
-}
+})
 
 //========== inicio CARROSSEL===============
 
@@ -71,11 +71,10 @@ const swiper = new Swiper('.swiper-container', {
 
 	breakpoints: {
 		767: {
-			slidesPerView: 2,
-			
+			slidesPerView: 2
 		},
 		1200: {
-			slidesPerView: 3,
+			slidesPerView: 3
 		}
 	}
 })
@@ -126,40 +125,44 @@ scrollReveal.reveal(
 )
 //  ============BOTÃO VOLTAR AO TOPO===========
 const backToTopButton = document.querySelector('.back-to-top')
-function backToTop() {
-	if (window.scrollY >= 500) {
+window.addEventListener('scroll', function () {
+	if (window.scrollY >= 800) {
 		backToTopButton.classList.add('show')
 	} else {
 		backToTopButton.classList.remove('show')
 	}
-}
+})
 
-// MENU SECTION ACTIVATE
-const sections = document.querySelectorAll('main section[id]')
-function activateMenuAtCurrentSection() {
-	const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+// Function to handle the visibility change
 
-	for (const section of sections) {
-		const sectionTop = section.offsetTop
-		const sectionHeight = section.offsetHeight
-		const sectionId = section.getAttribute('id')
-		const checkpointStart = checkpoint >= sectionTop
-		const checkpointEnd = checkpoint <= sectionTop + sectionHeight
-		if (checkpointStart && checkpointEnd) {
+function handleVisibilityChange(entries, observer) {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
 			document
-				.querySelector('nav ul li a[href*=' + sectionId + ']')
+				.querySelector('nav ul li a[href*=' + entry.target.id + ']')
 				.classList.add('active')
+			console.log(`Element with ID ${entry.target.id} is now visible.`)
 		} else {
 			document
-				.querySelector('nav ul li a[href*=' + sectionId + ']')
+				.querySelector('nav ul li a[href*=' + entry.target.id + ']')
 				.classList.remove('active')
 		}
-	}
+	})
 }
 
-// ========WHEN SCROLL========
-window.addEventListener('scroll', () => {
-	changeHeaderWhenScroll()
-	backToTop()
-	activateMenuAtCurrentSection()
+// Create a new Intersection Observer instance with custom options
+let options = {
+	root: null, // relative to the viewport
+	rootMargin: '0px', // no margins
+	threshold: 0.3 // trigger when at least half of the element is visible
+}
+
+let observer = new IntersectionObserver(handleVisibilityChange, options)
+
+// Get all elements you want to observe
+let elements = document.querySelectorAll('section')
+
+// Start observing each element
+elements.forEach(element => {
+	observer.observe(element)
 })
