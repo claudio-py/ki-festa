@@ -133,7 +133,7 @@ window.addEventListener('scroll', function () {
 	}
 })
 
-// Function to handle the visibility change
+// Function to handle the visibility change=======================
 
 function handleVisibilityChange(entries, observer) {
 	entries.forEach(entry => {
@@ -160,7 +160,7 @@ let options = {
 let observer = new IntersectionObserver(handleVisibilityChange, options)
 
 // Get all elements you want to observe
-let elements = document.querySelectorAll('section')
+let elements = document.querySelectorAll('main *[id]')
 
 // Start observing each element
 elements.forEach(element => {
