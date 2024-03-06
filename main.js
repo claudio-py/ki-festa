@@ -32,9 +32,9 @@ function changeHeaderWhenScroll() {
 	}
 }
 
-//========== BANNER CARROSSEL===============
+//========== inicio CARROSSEL===============
 
-const swiperBanner = new Swiper('.swiper-banner', {
+const swiperInicio = new Swiper('.swiper-inicio', {
 	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
@@ -45,14 +45,14 @@ const swiperBanner = new Swiper('.swiper-banner', {
 	grabCursor: true,
 	// If we need pagination
 	pagination: {
-		el: '.swiper-banner .swiper-pagination',
+		el: '.swiper-inicio .swiper-pagination',
 		clickable: true
 	},
 
 	// Navigation arrows
 	navigation: {
-		nextEl: '.swiper-banner .swiper-button-next',
-		prevEl: '.swiper-banner .swiper-button-prev'
+		nextEl: '.swiper-inicio .swiper-button-next',
+		prevEl: '.swiper-inicio .swiper-button-prev'
 	}
 })
 
@@ -115,19 +115,19 @@ const scrollReveal = ScrollReveal({
 
 scrollReveal.reveal(
 	`
-#home .image, #home .text, 
-#about .image, #about .text,
-#services header, #services .card,
-#testimonials header, #testimonials .testimonials,
-#contact.text, #contact .links,
-footer .brand, footer .social 
+#inicio .swiper-inicio,
+#slide2 header, #slide2 .swiper-container,
+#sobre .text h2, #sobre .text h1,#sobre .text h3,#sobre .text .wpp-btn,
+#social .insta img,#social .insta .text , 
+#vantagens1 .group-0, #vantagens1 .group-1,#vantagens1 .group-2,#vantagens1 .group-3
+
 `,
 	{ interval: 100 }
 )
 //  ============BOTÃO VOLTAR AO TOPO===========
 const backToTopButton = document.querySelector('.back-to-top')
 function backToTop() {
-	if (window.scrollY >= 2000) {
+	if (window.scrollY >= 500) {
 		backToTopButton.classList.add('show')
 	} else {
 		backToTopButton.classList.remove('show')
