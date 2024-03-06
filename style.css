@@ -271,6 +271,7 @@ section#inicio .swiper-inicio {
 	position: relative;
 }
 
+
 .swiper-pagination,
 .swiper-button-prev,
 .swiper-button-next {
@@ -369,11 +370,11 @@ section#inicio .swiper-inicio {
 }
 /* ======================SOBRE////////////======== */
 #sobre {
-	background-image: url(./assets/foto4.jpeg);
+	background-image: url(./assets/sobrebanner.jpeg);
 	background-repeat: no-repeat;
 	position: relative;
 	background-size: cover;
-	margin-top: 3rem;
+	margin-top: 5rem!important;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
@@ -381,22 +382,22 @@ section#inicio .swiper-inicio {
 	align-items: center;
 }
 
-#sobre::before {
+/* #sobre::before {
 	content: '';
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	/* background: linear-gradient(
+	background: linear-gradient(
 		to left,
 		rgb(255, 255, 255),
 		rgba(240, 197, 161, 0.493),
 		rgba(255, 255, 255, 0)
-	); */
+	);
 	z-index: -1;
 	opacity: 0;
-}
+} */
 #sobre .text {
 	display: flex;
 	flex-direction: column;
@@ -416,10 +417,10 @@ section#inicio .swiper-inicio {
 }
 #sobre .text h2 {
 	text-shadow: 2px 2px 4px grey;
-	color: #fffbf4;
+	color: #ff7d01;
 }
 #sobre .text h3 {
-	color: #fffbf4;
+	/* color: #000; */
 }
 .wpp-btn {
 	display: flex;
@@ -752,17 +753,17 @@ footer .brand p {
 	#sobre {
 		justify-content: flex-start;
 		margin: 0;
-		background-size: contain !important;
+		background-size: contain!important;
 	}
-	#sobre::before {
+	/* #sobre::before {
 		background: linear-gradient(
 			to right,
 			rgb(255, 255, 255),
 			rgba(161, 208, 240, 0.493),
 			rgba(255, 255, 255, 0)
-		); /* Adjust opacity as needed */
+		);
 		opacity: 0 !important;
-	}
+	} */
 	#sobre div.text {
 		max-width: 50rem;
 		margin-left: 5rem;
@@ -823,12 +824,12 @@ footer .brand p {
 	/* ==================SOBRE========== */
 	#sobre {
 		flex-direction: row;
-		z-index: -2;
+		/* z-index: -2; */
 		background-size: cover;
 	}
-	#sobre::before {
+	/* #sobre::before {
 		opacity: 1;
-	}
+	} */
 	#sobre div.sobre-img {
 		min-width: 38rem;
 		align-self: flex-start;
