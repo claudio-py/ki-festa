@@ -612,7 +612,7 @@ section#inicio .swiper-inicio {
 /* /=====================looptext================= */
 
 .div-loop {
-	background: var(--base-bg);
+	background: var(--base-bg-gradient);
 }
 .div-loop {
 	overflow: hidden;
