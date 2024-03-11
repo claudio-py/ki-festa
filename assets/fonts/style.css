@@ -9,11 +9,15 @@
   font-style: normal;
   font-display: block;
 }
+@font-face{
+  font-family: Adigiana-toy;
+  src: url(./fonts/AdigianaUI.ttf);
+}
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: never;
+  /* speak: never; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

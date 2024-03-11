@@ -27,17 +27,12 @@ window.addEventListener('scroll', () => {
 		header.classList.add('scroll')
 		// nav.style.height = 'var(--shrink )'
 		// showMenu.style.top = 'var(--shrink )'
-				root.style.setProperty('--header-height', '5rem')
-
+		root.style.setProperty('--header-height', '5rem')
 	} else {
 		header.classList.remove('scroll')
 		// nav.style.height = 'var(--header-height )'
 		// showMenu.style.top = 'var(--header-height )'
-				root.style.setProperty('--header-height', '10rem')
-
-		
-
-
+		root.style.setProperty('--header-height', '10rem')
 	}
 })
 

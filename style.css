@@ -17,21 +17,22 @@
 		#ff7d01,
 		#fe8684,
 		#70fe6f,
-		#5be7fe
+		#5be7fe,
+		#5bc0c5
 	);
 	--base-color2: #36238a;
 	--base-color3: #8a2387;
 	--base-color4: #e94057;
-	--base-color: hsl(var(--hue) 36% 57%);
+	--base-color: #f37221;
 	--base-color-second: hsl(var(--hue) 65% 88%);
 	--base-color-alt: hsl(var(--hue) 57% 53%);
-	--title-color: hsl(var(--hue) 41% 10%);
+	--title-color: #f37221;
 	--text-color: hsl(0 0% 46%);
 	--text-color-light: hsl(0 0% 98%);
 	--body-color: hsl(0 0% 98%);
 	--title-font-size: 3rem;
 	--subtitle-font-size: 1.6rem;
-	--title-font: 'Poppins', sans-serif;
+	--title-font: 'Adigiana-toy', sans-serif;
 	--body-font: 'DM Sans', sans-serif;
 }
 
@@ -70,16 +71,22 @@ body {
 	color: var(--text-color);
 	background: var(--body-color);
 }
+
 main {
 	/* margin-top: calc(var(--header-height)); */
+
 	margin-top: 10rem;
 }
+h1{
+	font-size: var(--title-font-size);
+}
 .title {
-	font: 700 var(--subtitle-font-size) var(--title-font);
+	font-family: var(--title-font);
 	color: var(--title-color);
+	
 }
 .button {
-	background: var(--base-color2);
+	background: #eb9d24;
 	color: var(--text-color-light);
 	height: 5.6rem;
 	display: inline-flex;
@@ -91,7 +98,7 @@ main {
 }
 
 .button:hover {
-	background: var(--base-color3);
+	background: #966413;
 }
 
 .divider-1 {
@@ -240,7 +247,7 @@ nav.show .menu {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 15px;
-	border: 2px solid #2f85f9;
+	border: 2px solid var(--base-color);
 	transition: top 0.5s;
 }
 
@@ -253,19 +260,22 @@ nav.show .menu {
 .hide {
 	display: none !important;
 }
+
 nav .icon-close {
-	visibility: hidden;
-	opacity: 0;
 	position: absolute;
-	top: -2.4rem;
-	right: 1.5rem;
+	right: -2rem;
+
 	transition: 0.2s;
+	/* visibility: hidden;
+	opacity: 0; */
 }
 nav.show div.icon-close {
-	visibility: visible;
-	opacity: 1;
-	top: 2.4rem;
+	/* visibility: visible;
+	opacity: 1; */
+	top: var(--header-height) / 2;
+	right: 1rem;
 }
+
 /* =================inicio=================== */
 section#inicio .swiper-inicio {
 	position: relative;
@@ -321,24 +331,6 @@ section#inicio .swiper-inicio {
 	background: var(--base-color);
 }
 
-/* ==============SERVICES================== */
-.cards.grid {
-	gap: 2.4rem;
-}
-.card {
-	padding: 5.8rem 3.2rem;
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-	border-bottom: 0.4rem solid var(--base-color);
-	border-radius: 0.4rem 0.4rem 0 0;
-	text-align: center;
-}
-#i {
-	display: block;
-	margin-bottom: 2.4rem;
-	font-size: 8rem;
-	color: var(--base-color);
-}
-
 /* ==============SLIDE2================== */
 #slide2 header {
 	text-align: center;
@@ -350,12 +342,7 @@ section#inicio .swiper-inicio {
 	font-size: 2rem;
 	margin-bottom: 1rem;
 }
-#slide2 header h2 {
-	font-size: var(--title-font-size);
-	font-family: var(--body-font);
-	color: rgb(78, 90, 197);
-	text-shadow: 2px 2px 4px grey;
-}
+
 
 #slide2 img {
 	width: 38rem;
@@ -367,11 +354,68 @@ section#inicio .swiper-inicio {
 	align-items: center;
 	justify-content: center;
 }
+/* =====================ORÇAMENTO================== */
+#orcamento {
+	background-image: url(./assets/bgv.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 50rem;
+	margin: 5rem 1rem 1rem 1rem;
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.589);
+}
+#orcamento div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	color: #fffbf4;
+	text-align: center;
+	margin: 1rem;
+}
+
+#orcamento .text span {
+	font-weight: 700;
+	color: white;
+}
+#orcamento .orca-img {
+	border-radius: 3rem;
+	padding: 1rem;
+}
+#orcamento div a.btn {
+	display: flex;
+	width: 80%;
+	border-radius: 5rem;
+	background: var(--base-color);
+	justify-content: center;
+	align-items: center;
+	box-sizing: content-box;
+	padding-block: 1rem;
+	color: white;
+	position: relative;
+}
+#orcamento div a img {
+	width: 2rem;
+	background-color: white;
+	box-sizing: content-box;
+	padding: 0.5rem;
+	border-radius: 100%;
+	margin-left: 20%;
+	position: absolute;
+	right: 1rem;
+}
 /* ======================SOBRE////////////======== */
 #sobre {
 	background-image: url(./assets/sobrebanner.jpeg);
 	background-repeat: no-repeat;
 	position: relative;
+	background-position: center;
 	background-size: cover;
 	margin-top: 5rem !important;
 	padding: 0;
@@ -405,15 +449,7 @@ section#inicio .swiper-inicio {
 	justify-content: center;
 	align-items: center;
 }
-#sobre .text h1 {
-	font-family: var(--title-font);
-	font-size: var(--title-font-size);
-	background: linear-gradient(to left, #70fe6f, #5be7fe);
 
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
 #sobre .text h2 {
 	text-shadow: 2px 2px 4px grey;
 	color: #ff7d01;
@@ -460,9 +496,7 @@ section#inicio .swiper-inicio {
 	text-align: center;
 	gap: 2rem;
 }
-#social div.text h2 {
-	font-size: var(--title-font-size);
-}
+
 #social div.text p {
 	font-size: var(--subtitle-font-size);
 }
@@ -484,12 +518,8 @@ section#inicio .swiper-inicio {
 	padding-block: 10rem;
 	width: 100%;
 }
-.swipe-social h2 {
+.swipe-social h1 {
 	color: rgb(250, 247, 247);
-	font-family: var(--title-font);
-	font-weight: 700;
-	font-size: 2rem;
-	margin: 0 !important;
 	text-align: center;
 	text-shadow: 2px 2px 4px rgb(51, 51, 51);
 }
@@ -511,12 +541,18 @@ section#inicio .swiper-inicio {
 	padding: 3.2rem;
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.589);
 	border-radius: 0.4rem;
+	min-height: 40rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 #social blockquote p {
 	position: relative;
 	text-indent: 3rem;
 	margin-bottom: 2.4rem;
-	color: var(--title-color);
+	color: black;
 }
 
 #social blockquote p span {
@@ -531,6 +567,11 @@ section#inicio .swiper-inicio {
 	display: flex;
 	align-items: center;
 	color: #fffbf4;
+	position: absolute;
+	bottom: 2rem;
+	left: 5rem;
+	text-shadow: 2px 2px 4px rgb(51, 51, 51);
+
 }
 #social cite img {
 	width: 5rem;
@@ -580,14 +621,7 @@ section#inicio .swiper-inicio {
 	margin-top: 1.5rem;
 	text-align: center;
 }
-.group-0 h2 {
-	font-size: var(--title-font-size);
-	font-family: var(--title-font);
-	background: var(--base-bg-gradient);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
+
 
 #vantagens .central img {
 	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
@@ -598,7 +632,7 @@ section#inicio .swiper-inicio {
 }
 #vantagens .svg {
 	border-radius: 10px 10px 80% 10px;
-	background: var(--base-bg-gradient);
+	background: var(--base-color);
 
 	width: fit-content;
 	height: fit-content;
@@ -612,7 +646,7 @@ section#inicio .swiper-inicio {
 /* /=====================looptext================= */
 
 .div-loop {
-	background: var(--base-bg-gradient);
+	background: var(--base-color);
 }
 .div-loop {
 	overflow: hidden;
@@ -639,12 +673,13 @@ section#inicio .swiper-inicio {
 /* ======================CONTACT================ */
 
 #contact .links {
-	background: var(--base-bg-gradient);
+	background: var(--base-color);
 	padding: 3rem 0 2rem;
 	border-radius: 25px;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	margin: 1.5rem;
 }
 #contact .contact-links #contact .grid {
 	gap: 6.4rem;
@@ -678,7 +713,7 @@ section#inicio .swiper-inicio {
 	align-items: center;
 }
 #contact ul li i {
-	color: var(--base-color);
+	color: white;
 }
 
 /* ============FOOTER================ */
@@ -687,7 +722,7 @@ footer a.logo img {
 	margin-left: 1rem;
 }
 footer {
-	background: var(--base-bg-gradient);
+	background: var(--base-color);
 }
 footer div {
 	padding: 4rem 0;
@@ -816,6 +851,27 @@ footer .brand p {
 	:root {
 		--title-font-size: 3.6rem;
 		--subtitle-font-size: 1.8rem;
+	}
+	/* =====================ORCAMENTO========== */
+	#orcamento {
+		background: url(./assets/bgh.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		flex-direction: row-reverse;
+		justify-content: space-around;
+	}
+	#orcamento div.text {
+		max-width: 50rem;
+		text-align: start;
+	}
+	#orcamento .orca-img {
+		max-width: 50rem;
+	}
+
+	#orcamento div a.btn {
+		min-width: 23rem;
+		max-width: 30rem;
 	}
 
 	/* ==================SOBRE========== */
