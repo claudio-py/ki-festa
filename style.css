@@ -24,7 +24,7 @@
 	--base-color3: #8a2387;
 	--base-color4: #e94057;
 	--base-color: #f37221;
-	--base-color-second: hsl(var(--hue) 65% 88%);
+	--base-color-second: #ff7d01;
 	--base-color-alt: hsl(var(--hue) 57% 53%);
 	--title-color: #f37221;
 	--text-color: hsl(0 0% 46%);
@@ -77,13 +77,12 @@ main {
 
 	margin-top: 10rem;
 }
-h1{
+h1 {
 	font-size: var(--title-font-size);
 }
 .title {
 	font-family: var(--title-font);
 	color: var(--title-color);
-	
 }
 .button {
 	background: #eb9d24;
@@ -338,11 +337,9 @@ section#inicio .swiper-inicio {
 	margin-top: 3rem;
 }
 #slide2 header h3 {
-	text-shadow: 2px 2px 4px grey;
 	font-size: 2rem;
 	margin-bottom: 1rem;
 }
-
 
 #slide2 img {
 	width: 38rem;
@@ -451,7 +448,6 @@ section#inicio .swiper-inicio {
 }
 
 #sobre .text h2 {
-	text-shadow: 2px 2px 4px grey;
 	color: #ff7d01;
 }
 
@@ -521,7 +517,6 @@ section#inicio .swiper-inicio {
 .swipe-social h1 {
 	color: rgb(250, 247, 247);
 	text-align: center;
-	text-shadow: 2px 2px 4px rgb(51, 51, 51);
 }
 .swiper-slide blockquote {
 	position: relative;
@@ -571,7 +566,6 @@ section#inicio .swiper-inicio {
 	bottom: 2rem;
 	left: 5rem;
 	text-shadow: 2px 2px 4px rgb(51, 51, 51);
-
 }
 #social cite img {
 	width: 5rem;
@@ -622,7 +616,6 @@ section#inicio .swiper-inicio {
 	text-align: center;
 }
 
-
 #vantagens .central img {
 	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 	object-fit: contain;
@@ -632,7 +625,7 @@ section#inicio .swiper-inicio {
 }
 #vantagens .svg {
 	border-radius: 10px 10px 80% 10px;
-	background: var(--base-color);
+	background: var(--base-color-second);
 
 	width: fit-content;
 	height: fit-content;
