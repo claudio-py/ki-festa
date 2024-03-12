@@ -122,7 +122,7 @@ scrollReveal.reveal(
 #slide2 header, #slide2 .swiper-container,
 #sobre .text ,#sobre .text .wpp-btn,
 #social .insta img,#social .insta .text , 
-#vantagens1 .group-0, #vantagens1 .group-1,#vantagens1 .group-2,#vantagens1 .group-3
+#vantagens .group-0, #vantagens1 .group-1,#vantagens1 .group-2,#vantagens1 .group-3
 
 `,
 	{ interval: 100 }

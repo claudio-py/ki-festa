@@ -6,6 +6,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 :root {
+	
 	font-size: 62.5%;
 	--header-height: 10rem;
 	--shrink: 5rem;
@@ -64,17 +65,17 @@ img {
 /* ============BASE================ */
 html.scroll-container {
 	scroll-behavior: smooth;
+	
 }
 
 body {
 	font: 400 1.6rem var(--body-font);
 	color: var(--text-color);
 	background: var(--body-color);
+	
 }
 
 main {
-	/* margin-top: calc(var(--header-height)); */
-
 	margin-top: 10rem;
 }
 h1 {
@@ -409,7 +410,7 @@ section#inicio .swiper-inicio {
 }
 /* ======================SOBRE////////////======== */
 #sobre {
-	background-image: url(./assets/sobrebanner.jpeg);
+	background-image: url(./assets/brinquedos.jpeg);
 	background-repeat: no-repeat;
 	position: relative;
 	background-position: center;
@@ -420,9 +421,10 @@ section#inicio .swiper-inicio {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: -2;
 }
 
-/* #sobre::before {
+#sobre::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -431,13 +433,13 @@ section#inicio .swiper-inicio {
 	left: 0;
 	background: linear-gradient(
 		to left,
-		rgb(255, 255, 255),
-		rgba(240, 197, 161, 0.493),
-		rgba(255, 255, 255, 0)
+		#eb9b248f,
+		rgb(247, 247, 247),
+		#5be8fe96
 	);
 	z-index: -1;
-	opacity: 0;
-} */
+	
+}
 #sobre .text {
 	display: flex;
 	flex-direction: column;
@@ -450,7 +452,9 @@ section#inicio .swiper-inicio {
 #sobre .text h2 {
 	color: #ff7d01;
 }
-
+#sobre .text h3{
+	color: black;
+}
 .wpp-btn {
 	display: flex;
 	align-items: center;
@@ -589,24 +593,65 @@ section#inicio .swiper-inicio {
 }
 
 /* //===================VANTAGENS=======================// */
-.vantagens-class {
+#vantagens {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	margin-bottom: 3rem;
+position: relative;
 }
-#vantagens {
-	justify-content: space-between;
+.splash1,
+.splash2,
+.splash3{
+	position: absolute;
+	z-index: -1;
+max-width: 5rem;
 }
-.vantagens-class p {
+.splash1{
+	top: 0rem;
+	left: 0;
+}
+.splash2{
+	right: 2rem;
+}
+.splash3{
+	bottom: 0;
+	left: 0;
+}
+
+.splash4,
+.splash5,
+.splash6{
+	position: absolute;
+	z-index: -1;
+	width: 30rem;
+}
+.splash4{
+	top: 45%;
+}
+.splash5{
+	bottom: 20%;
+	right: 20%;
+}
+.splash6{
+	left: 23%;
+	bottom: 23%;
+}
+
+#vantagens p {
 	max-width: 50rem;
 	font-size: 1.8rem;
 }
-#vantagens p {
+.vantagens-class {
+	justify-content: space-between;
+}
+
+.vantagens-class p {
 	max-width: 38rem;
 }
-#vantagens div {
+.vantagens-class div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -616,14 +661,30 @@ section#inicio .swiper-inicio {
 	text-align: center;
 }
 
-#vantagens .central img {
-	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+.vantagens-class .central img {
+	/* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
 	object-fit: contain;
+	border-radius: 20px;
+
+	
+	box-sizing: content-box;
 }
-#vantagens .central {
+.vantagens-class .central .img {
 	margin-inline: 1.5rem;
+	width: fit-content;
+	height: fit-content;
+	padding: 1rem;
+	border-radius: 15px;
+	background: linear-gradient(
+		to left,
+		#ff7d01,
+		#fe8684,
+		#70fe6f,
+		#5be7fe,
+		#5bc0c5
+	);;
 }
-#vantagens .svg {
+.vantagens-class .svg {
 	border-radius: 10px 10px 80% 10px;
 	background: var(--base-color-second);
 
@@ -631,7 +692,7 @@ section#inicio .swiper-inicio {
 	height: fit-content;
 	padding: 1rem;
 }
-#vantagens .svg img {
+.vantagens-class .svg img {
 	margin-right: 1rem;
 	width: 3rem;
 	height: auto;
@@ -725,8 +786,13 @@ footer div {
 	gap: 1rem;
 }
 
-footer .brand p {
+footer .brand {
 	color: var(--text-color-light);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 /* ==================back-to-top============= */
@@ -776,26 +842,48 @@ footer .brand p {
 	}
 	/* =================SOBRE================ */
 	#sobre {
-		justify-content: flex-start;
+		justify-content: space-around;
 		margin: 0;
 		background-size: contain !important;
 	}
-	/* #sobre::before {
-		background: linear-gradient(
-			to right,
-			rgb(255, 255, 255),
-			rgba(161, 208, 240, 0.493),
-			rgba(255, 255, 255, 0)
-		);
-		opacity: 0 !important;
-	} */
+	#sobre::before {
+	
+	background: linear-gradient(
+		to right,
+		rgb(247, 247, 247),
+		#5be8fe96,
+		#eb9b248f
+		
+		
+	);
+	
+	
+}
 	#sobre div.text {
 		max-width: 50rem;
 		margin-left: 5rem;
 	}
 	.sobre-img {
-		display: none;
+		/* display: none; */
+		margin-top: 10rem!important;
+		width: 30rem;
+		height: auto;
+		min-width: 0!important;
+		box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.588);
 	}
+	/* ===============VANTAGENS============ */
+	.splash4{
+	top:0!important;
+	right: 0!important;
+}
+.splash5{
+	bottom: 20%;
+	right: 28%!important;
+}
+.splash6{
+	left: 28%!important;
+	bottom: 23%;
+}
 	/* =====REUSABLE CLASSES===== */
 	.container {
 		max-width: 1120px;
@@ -820,9 +908,7 @@ footer .brand p {
 	nav .icon-menu {
 		display: none;
 	}
-	main {
-		margin-top: calc(var(--header-height));
-	}
+	
 
 	/* ========CONTACT====== */
 	#contact .container {
@@ -910,13 +996,26 @@ footer .brand p {
 		font-size: 2.5rem;
 	}
 	/* ============VANTAGENS======== */
-	#vantagens .central img {
+	.vantagens-class .central img {
 		max-width: 34rem;
 	}
-	#vantagens {
+	.vantagens-class {
 		display: flex;
 	}
-
+.vantagens-class .central{
+	flex-direction: column-reverse;
+}
+.splash4{
+	top: 15%;
+}
+.splash5{
+	bottom: 25%;
+	right: 20%;
+}
+.splash6{
+	left: 28%;
+	bottom: 23%;
+}
 	/* =============CONTACT============ */
 	#contact div.text {
 		display: flex;
