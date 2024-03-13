@@ -145,7 +145,7 @@ function handleVisibilityChange(entries, observer) {
 			document
 				.querySelector('nav ul li a[href*=' + entry.target.id + ']')
 				.classList.add('active')
-			console.log(`Element with ID ${entry.target.id} is now visible.`)
+			
 		} else {
 			document
 				.querySelector('nav ul li a[href*=' + entry.target.id + ']')
@@ -170,3 +170,5 @@ let elements = document.querySelectorAll('main *[id]')
 elements.forEach(element => {
 	observer.observe(element)
 })
+
+

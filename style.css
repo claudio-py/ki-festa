@@ -799,11 +799,14 @@ footer .brand {
 .back-to-top {
 	width: 8rem;
 	position: fixed;
-	left: 0rem;
-	bottom: 0;
+	left: -1rem;
+	bottom: -1rem;
 	visibility: hidden;
 	opacity: 0;
 	animation: float 2s ease-in-out infinite;
+	 
+	
+	 
 }
 .back-to-top.show {
 	visibility: visible;
@@ -823,12 +826,21 @@ footer .brand {
 	}
 }
 /* ==============WPP================ */
-.wpp {
+div.wpp {
 	width: 8rem;
 	position: fixed;
 	right: 0rem;
-	bottom: 3rem;
+	bottom: 0rem;	 
 }
+.wpp a{
+ position: absolute;
+ 
+ width: 100%;
+ height: 8rem;
+opacity: 0;
+}
+
+
 
 /* =================MEDIA QUERIES============ */
 @media (min-width: 1200px) {
