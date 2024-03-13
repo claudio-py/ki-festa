@@ -51,6 +51,16 @@
 	/* border-radius: .5rem; */
 }
 /* ========================================= */
+small.small{
+	position: fixed;
+	color: black;
+	z-index: 10000;
+	top: .5rem;
+	right: 10rem;
+	font-weight: bolder;
+	font-size: 8px;
+	
+}
 ul {
 	list-style: none;
 }
@@ -621,7 +631,7 @@ max-width: 5rem;
 	left: 0;
 }
 
-.splash4,
+/* .splash4,
 .splash5,
 .splash6{
 	position: absolute;
@@ -638,7 +648,7 @@ max-width: 5rem;
 .splash6{
 	left: 23%;
 	bottom: 23%;
-}
+} */
 
 #vantagens p {
 	max-width: 50rem;
@@ -884,7 +894,7 @@ opacity: 0;
 		box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.588);
 	}
 	/* ===============VANTAGENS============ */
-	.splash4{
+	/* .splash4{
 	top:0!important;
 	right: 0!important;
 }
@@ -895,7 +905,7 @@ opacity: 0;
 .splash6{
 	left: 28%!important;
 	bottom: 23%;
-}
+} */
 	/* =====REUSABLE CLASSES===== */
 	.container {
 		max-width: 1120px;
@@ -943,6 +953,10 @@ opacity: 0;
 		--title-font-size: 3.6rem;
 		--subtitle-font-size: 1.8rem;
 	}
+small.small{
+	right: 1rem;
+	top: 0;
+}
 	/* =====================ORCAMENTO========== */
 	#orcamento {
 		background: url(./assets/bgh.jpg);
