@@ -342,22 +342,22 @@ section#inicio .swiper-inicio {
 }
 
 /* ==============SLIDE2================== */
-#slide2 header {
+.slide2 header {
 	text-align: center;
 	margin-bottom: 1rem;
 	margin-top: 3rem;
 }
-#slide2 header h3 {
+.slide2 header h3 {
 	font-size: 2rem;
 	margin-bottom: 1rem;
 }
 
-#slide2 img {
+.slide2 img {
 	width: 38rem;
 	height: 38rem;
 	border-radius: 25px;
 }
-#slide2 .swiper-slide {
+.slide2 .swiper-slide {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -374,7 +374,7 @@ section#inicio .swiper-inicio {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 1rem;
+	padding: 5rem 1rem;
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.589);
 }
 #orcamento div {
@@ -394,7 +394,11 @@ section#inicio .swiper-inicio {
 }
 #orcamento .orca-img {
 	border-radius: 3rem;
-	padding: 1rem;
+	/* padding: 1rem; */
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.589);
+
 }
 #orcamento div a.btn {
 	display: flex;
@@ -972,6 +976,7 @@ small.small{
 	}
 	#orcamento .orca-img {
 		max-width: 50rem;
+		margin-right: 1rem;
 	}
 
 	#orcamento div a.btn {
