@@ -147,7 +147,7 @@ window.addEventListener('scroll', function () {
 function handleVisibilityChange(entries, observer) {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
-			navLinks.forEach(link => link.classList.remove('active'))
+			// navLinks.forEach(link => link.classList.remove('active'))
 			document.querySelector('nav ul li a[href*=' + entry.target.id + ']').classList.add('active')
 		} else {
 			document.querySelector('nav ul li a[href*=' + entry.target.id + ']').classList.remove('active')
