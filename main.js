@@ -5,7 +5,7 @@ const iconMenu = document.querySelector('nav .icon-menu ')
 const logo = document.querySelector('nav .logo img')
 const root = document.querySelector(':root')
 const video = document.getElementById('myVideo')
-const navMenuLiShow =document.querySelector('nav ul li a[href*=orcamento]')
+const navMenuLiShow = document.querySelector('nav ul li a[href*=orcamento]')
 const navLinks = document.querySelectorAll('nav ul li a')
 for (const element of toggle) {
 	element.addEventListener('click', () => {
@@ -148,10 +148,13 @@ function handleVisibilityChange(entries, observer) {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			// navLinks.forEach(link => link.classList.remove('active'))
-			document.querySelector('nav ul li a[href*=' + entry.target.id + ']').classList.add('active')
+			document
+				.querySelector('nav ul li a[href*=' + entry.target.id + ']')
+				.classList.add('active')
 		} else {
-			document.querySelector('nav ul li a[href*=' + entry.target.id + ']').classList.remove('active')
-			
+			document
+				.querySelector('nav ul li a[href*=' + entry.target.id + ']')
+				.classList.remove('active')
 		}
 	})
 }
@@ -176,7 +179,9 @@ elements.forEach(element => {
 const observerVideo = new MutationObserver(function (mutations) {
 	mutations.forEach(function (mutation) {
 		if (mutation.attributeName === 'class') {
-			const attributeValue = mutation.target.getAttribute(mutation.attributeName)
+			const attributeValue = mutation.target.getAttribute(
+				mutation.attributeName
+			)
 			if (attributeValue.includes('active')) {
 				video.play()
 			} else {
@@ -190,4 +195,3 @@ const observerVideo = new MutationObserver(function (mutations) {
 observerVideo.observe(navMenuLiShow, {
 	attributes: true //configure it to listen to attribute changes
 })
-
